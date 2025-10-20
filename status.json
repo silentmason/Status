@@ -1,0 +1,14 @@
+{
+  "services": [
+    { "name": "Website", "status": "operational" },
+    { "name": "API", "status": "degraded" },
+    { "name": "Database", "status": "down" }
+  ],
+  "incidents": [
+    {
+      "title": "API Latency",
+      "status": "investigating",
+      "updated": "2025-10-20T15:00:00Z"
+    }
+  ]
+}

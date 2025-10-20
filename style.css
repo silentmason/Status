@@ -1,0 +1,93 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #2f3136;
+  color: #dcddde;
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #202225;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #b9bbbe;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  color: #fff;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+/* Service Cards */
+.services, .incidents {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.card {
+  background-color: #36393f;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+.status.operational {
+  background-color: #43b581;
+  color: #fff;
+}
+
+.status.degraded {
+  background-color: #faa61a;
+  color: #000;
+}
+
+.status.down {
+  background-color: #f04747;
+  color: #fff;
+}
