@@ -1,36 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Status Admin</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="app">
-    <aside class="sidebar">
-      <h1 class="logo">⚡ Admin</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">View Status</a></li>
-          <li><a href="admin.html">Admin Panel</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <head>
+    <meta charset="utf-8" />
+    <title>Status Admin</title>
 
-    <main class="content">
-      <h2>Manage Services</h2>
-      <div id="services-form"></div>
-      <button id="add-service">+ Add Service</button>
+    <!-- Your site’s CSS -->
+    <link rel="stylesheet" href="/style.css" />
 
-      <h2>Manage Incidents</h2>
-      <div id="incidents-form"></div>
-      <button id="add-incident">+ Add Incident</button>
-
-      <h2>Export</h2>
-      <button id="export-json">Download status.json</button>
-    </main>
-  </div>
-
-  <script src="admin.js"></script>
-</body>
+    <!-- Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </head>
+  <body>
+    <script>
+      // Optional: register your CSS inside the CMS preview pane
+      if (window.CMS) {
+        CMS.registerPreviewStyle("/style.css");
+      }
+    </script>
+  </body>
 </html>
