@@ -91,3 +91,30 @@ h2 {
   background-color: #f04747;
   color: #fff;
 }
+
+.service-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;       /* rounded corners */
+  box-shadow: 0 0 6px rgba(114, 137, 218, 0.6); /* subtle Discord glow */
+  object-fit: cover;
+}
+
+.incident-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.incident-img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(240, 71, 71, 0.6); /* subtle red glow for incident images */
+}

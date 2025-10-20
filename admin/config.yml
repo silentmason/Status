@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: silentmason/Status   # your repo
+  branch: main
+  base_url: https://ffnystatus.pages.dev/api
+
+media_folder: "public/uploads"   # where files are stored in repo
+public_folder: "/uploads"        # how they’re served on the site
+
+collections:
+  - name: "status"
+    label: "Status Data"
+    files:
+      - file: "public/status.json"
+        label: "Service Status"
+        name: "status"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["operational", "degraded", "down"] }
+              - { label: "Icon", name: "icon", widget: "image" }   # service icon
+          - label: "Incidents"
+            name: "incidents"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Status", name: "status", widget: "select", options: ["investigating", "identified", "monitoring", "resolved"] }
+              - { label: "Updated", name: "updated", widget: "datetime" }
+              - { label: "Screenshot", name: "screenshot", widget: "image", required: false }   # 👈 new field
